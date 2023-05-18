@@ -1,0 +1,10 @@
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="m-subheader">
+            <div class="m--space-20"></div>
+            <div class="alert alert-{{ label }} alert-dismissible animated fadeIn" role="alert">
+                <span>{{ message|raw|trans }}</span>
+            </div>
+        </div>
+    {% endfor %}
+{% endfor %}

@@ -1,0 +1,57 @@
+{% if checkerLogs.items %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr class="">
+                <th>
+                    {{ knp_pagination_sortable(
+                        checkerLogs,
+                        'ID',
+                        'cl.id'
+                    ) }}
+                </th>
+                <th>
+                    {{ knp_pagination_sortable(
+                        checkerLogs,
+                        'label.response_value' | trans,
+                        'cl.value'
+                    ) }}
+                </th>
+                <th>
+                    {{ knp_pagination_sortable(
+                        checkerLogs,
+                        'label.action' | trans,
+                        'cl.action'
+                    ) }}
+                </th>
+                <th>
+                    {{ 'label.link_url' | trans }}
+                </th>
+                <th>
+                    {{ knp_pagination_sortable(
+                        checkerLogs,
+                        'label.created_at' | trans,
+                        'cl.createdAt'
+                    ) }}
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for checkerLog in checkerLogs.items %}
+                <tr>
+                    <td>{{ checkerLog.id }}</td>
+                    <td class="{{ checkerLog.value|length > 15 ? 'text-danger' : '' }}" title="{{ checkerLog.value }}">
+                        {{ checkerLog.value|length > 15 ? checkerLog.value|slice(0, 15) ~ '...' : checkerLog.value  }}
+                    </td>
+                    <td>{{ checkerLog.action|trans }}</td>
+                    <td><a href="{{ path('link_edit', {'link': checkerLog.link.id}) }}">{{ checkerLog.link.title }}</a></td>
+                    <td>{{ checkerLog.createdAt | date('Y-m-d H:i:s') }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% include 'client/includes/pagination_block.html.twig'with {records: checkerLogs} %}
+{% else %}
+    {% include 'client/includes/data_not_found.html.twig' %}
+{% endif %}

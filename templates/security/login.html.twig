@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <div class="content content--login">
+        {% include 'client/includes/login_image_block.html.twig' %}
+        <div class="content--login__right">
+            <form method="post" class="login-form box-shadow-custom ">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                {% if app.user %}
+                    <div class="mb-3">
+                        You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    </div>
+                {% endif %}
+                <div class="mb-3">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                </div>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                <div class="d-flex justify-content-between align-items-center">
+                    <input type="submit" name="register" class="btn btn-primary" value="{{ 'sign_in'|trans }}">
+                    <p>Or</p>
+                    <a href="{{ path('app_register') }}">{{ 'sign_up'|trans }}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

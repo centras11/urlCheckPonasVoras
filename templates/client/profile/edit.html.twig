@@ -1,0 +1,38 @@
+{% extends 'client/base.html.twig' %}
+{% block bodyPanel %}
+    {{ form_start(form, {'attr': {'class': 'profile-form'}}) }}
+    <div class="content content--block row animated fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 mt-4 mb-md-0">
+                    {{ form_row(form.name) }}
+                </div>
+                <div class="col-sm-12 mt-4 mb-md-0">
+                    {{ form_row(form.lastName) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mt-4 mb-md-0">
+                    {{ form_row(form.plainPassword.first) }}
+                </div>
+                <div class="col-sm-12 mt-4 mb-md-0">
+                    {{ form_row(form.plainPassword.second) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="line"></div>
+            </div>
+            <div class="row d-flex justify-content-between mt-4 mb-md-0">
+                <div class="col">
+                    {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+                </div>
+                <div class="col d-flex justify-content-end ">
+                    <a href="{{ path('link_list') }}" class="btn btn-secondary">
+                        {{ 'back'|trans }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock bodyPanel %}

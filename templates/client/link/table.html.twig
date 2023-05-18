@@ -1,0 +1,68 @@
+{% if links.items %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr class="">
+                <th>
+                    {{ knp_pagination_sortable(
+                        links,
+                        'label.link_id' | trans,
+                        't.id'
+                    ) }}
+                </th>
+                <th>
+                    {{ knp_pagination_sortable(
+                        links,
+                        'label.link_url' | trans,
+                        't.url'
+                    ) }}
+                </th>
+                <th>
+                    {{ knp_pagination_sortable(
+                        links,
+                        'label.scrape_text' | trans,
+                        't.scrapeText'
+                    ) }}
+                </th>
+                <th>
+                    {{ knp_pagination_sortable(
+                        links,
+                        'label.link_title' | trans,
+                        't.title'
+                    ) }}
+                </th>
+                <th>
+                    {{ knp_pagination_sortable(
+                        links,
+                        'label.created_at' | trans,
+                        't.createdAt'
+                    ) }}
+                </th>
+                <th>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for link in links.items %}
+                <tr>
+                    <td>{{ link.id }}</td>
+                    <td>{{ link.url }}</td>
+                    <td>{{ link.scrapeText }}</td>
+                    <td>{{ link.title }}</td>
+                    <td>{{ link.createdAt | date('Y-m-d H:i:s') }}</td>
+                    <td class="actions">
+                        <a href="{{ path('link_edit', {'link': link.id}) }}" class="btn btn-primary">
+                            <span class="icon icon-pencil-square-o"></span></a>
+                        <a href="{{ path('link_delete', {'link': link.id}) }}"
+                           class="btn btn-danger js-delete-swal mt-4 mt-md-0">
+                            <span class="icon icon-trash-o"></span></a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% include 'client/includes/pagination_block.html.twig'with {records: links} %}
+{% else %}
+    {% include 'client/includes/data_not_found.html.twig' %}
+{% endif %}

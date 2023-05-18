@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="content content--login">
+        {% include 'client/includes/login_image_block.html.twig' %}
+        <div class="content--login__right">
+            {{ form_start(registrationForm, {'attr': {'class': ' login-form box-shadow-custom '}}) }}
+            {% include 'notifications/form_notifications.html.twig' %}
+            {{ form_row(registrationForm.name) }}
+            {{ form_row(registrationForm.lastName) }}
+            {{ form_row(registrationForm.email) }}
+            <div class="mb-3">
+                {{ form_label(registrationForm.plainPassword.first, 'password') }}
+                {{ form_widget(registrationForm.plainPassword.first) }}
+                {{ form_errors(registrationForm.plainPassword) }}
+                </span>
+            </div>
+            {{ form_row(registrationForm.plainPassword.second) }}
+            {{ form_row(registrationForm.agreeTerms, {'attr' : {'class':'input-checkbox '}}) }}
+            <div class="d-flex justify-content-between align-items-center">
+                <button type="submit" class="btn btn-primary">Register</button>
+                <p>Or</p>
+                <a href="{{ path('app_login') }}">{{ 'sign_in'|trans }}</a>
+            </div>
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
+{% endblock %}

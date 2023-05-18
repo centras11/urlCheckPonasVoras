@@ -1,0 +1,46 @@
+{% extends 'client/base.html.twig' %}
+{% block bodyPanel %}
+    <div class="content content--block animated fadeIn">
+        {{ form_start(form, {
+            'action': path('checker_log_list', {} ),
+            'attr': {'class': 'filter-form'}
+        }) }}
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-12 col-lg-3 mt-4 mb-md-0">
+                    {{ form_row(form.value) }}
+                </div>
+                <div class="col col-md-12 col-lg-3 mt-4 mb-md-0">
+                    {{ form_row(form.action) }}
+                </div>
+                <div class="col col-md-12 col-lg-3 mt-4 mb-md-0">
+                    {{ form_row(form.link) }}
+                </div>
+                <div class="col col-md-12 col-lg-3 mt-4 mb-md-0">
+                    {{ form_row(form.createdAtFrom) }}
+                </div>
+                <div class="col col-md-12 col-lg-3 mt-4 mb-md-0">
+                    {{ form_row(form.createdAtTo) }}
+                </div>
+                <div class="col d-flex justify-content-between align-items-end mt-4 mb-md-0">
+                    <button class="btn btn-primary">
+                        <span class="icon icon-search"></span>
+                    </button>
+                    <a href="{{ path('checker_log_list') }}" class="btn btn-secondary">
+                        <span class="icon icon-rotate-left"></span>
+                    </a>
+                    <a href="{{ path('checker_log_export')|add_query }}" class="btn btn-success">
+                        <span class="icon icon-file-excel-o"></span>
+                    </a>
+                    <a href="{{ path('checker_log_run')|add_query }}" class="btn btn-outline-secondary">
+                        {{ 'run_check'|trans }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    </div>
+    <div class="content content--block row animated fadeIn">
+        {% include 'client/checker-log/table.html.twig' %}
+    </div>
+{% endblock bodyPanel %}

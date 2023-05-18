@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="content content--block mt-3 mb-md-3">
+        <header class="dashboard-header">
+            <div class="dashboard-header__left row">
+                <div class="dashboard-header__logo d-flex align-items-center col-sm-12 col-md-4 justify-content-center">
+                    <a href="{{ path('link_list') }}"><img src="{{ asset('images/logo-black.png') }}"
+                                                           alt="User logo"></a>
+                </div>
+                <div class="dashboard-header__nav col-sm-12 col-md-8 d-flex align-items-center justify-content-center mt-4 mb-md-0">
+                    <div class="dashboard-header__nav-content">
+                        {{ knp_menu_render('main', { 'currentClass': 'active', 'ancestorClass': 'active'}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-header__profile mt-4 mb-md-0">
+                <div class="dashboard-header__profile-circle"
+                     style="background-image: url('{{ asset('images/profile.jpg') }}')">
+                </div>
+                <div class="dashboard-header__profile-name">
+                    <span>{{ app.user.name ~ ' ' ~  app.user.lastName }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10.397" height="17.398" viewBox="0 0 10.397 17.398">
+                        <g id="Group_429" data-name="Group 429" transform="translate(1311.403 -878.506) rotate(135)">
+                            <line id="Line_175" data-name="Line 175" class="cls-1" y2="10.506"
+                                  transform="translate(1553.5 288.5)"/>
+                            <line id="Line_176" data-name="Line 176" class="cls-1" x2="10" y2="0.506"
+                                  transform="translate(1543.5 298.5)"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="dashboard-header__profile-menu">
+                    <div class="dashboard-header__profile-menu-content">
+                        {{ knp_menu_render('profile', { 'currentClass': 'active'}) }}
+                        <a href="{{ path('app_logout') }}" id="logout">{{ 'logout'|trans }}</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% include 'notifications/form_notifications.html.twig' %}
+    </div>
+    {% block bodyPanel %}{% endblock %}
+{% endblock body %}

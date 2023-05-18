@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="lt" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="link_list" resname="link_list">
+                <source>Link list</source>
+                <target>Link list</target>
+            </trans-unit>
+            <trans-unit id="sign_in" resname="sign_in">
+                <source>Sign in</source>
+                <target>Sign in</target>
+            </trans-unit>
+            <trans-unit id="sign_up" resname="sign_up">
+                <source>Sign up</source>
+                <target>Sign up</target>
+            </trans-unit>
+            <trans-unit id="privacy_policy" resname="privacy_policy">
+                <source>Privacy policy</source>
+                <target>Privacy policy</target>
+            </trans-unit>
+            <trans-unit id="label.repeat_password" resname="label.repeat_password">
+                <source>Repeat password</source>
+                <target>Repeat password</target>
+            </trans-unit>
+            <trans-unit id="label.password" resname="label.password">
+                <source>Password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="agree_terms" resname="agree_terms">
+                <source>Agree terms</source>
+                <target>Agree terms</target>
+            </trans-unit>
+            <trans-unit id="label.link_title" resname="label.link_title">
+                <source>Link title</source>
+                <target>Link title</target>
+            </trans-unit>
+            <trans-unit id="label.link_id" resname="label.link_id">
+                <source>Link ID</source>
+                <target>Link ID</target>
+            </trans-unit>
+            <trans-unit id="label.time_taken" resname="label.time_taken">
+                <source>Time taken</source>
+                <target>Time taken</target>
+            </trans-unit>
+            <trans-unit id="label.created_at" resname="label.created_at">
+                <source>Created at</source>
+                <target>Created at</target>
+            </trans-unit>
+            <trans-unit id="label.comment" resname="label.comment">
+                <source>Comment</source>
+                <target>Comment</target>
+            </trans-unit>
+            <trans-unit id="label.date" resname="label.date">
+                <source>Date</source>
+                <target>Date</target>
+            </trans-unit>
+            <trans-unit id="label.date_from" resname="label.date_from">
+                <source>Date from</source>
+                <target>Date from</target>
+            </trans-unit>
+            <trans-unit id="label.date_to" resname="label.date_to">
+                <source>Date to</source>
+                <target>Date to</target>
+            </trans-unit>
+            <trans-unit id="form.edit" resname="form.edit">
+                <source>Save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="back" resname="back">
+                <source>Back</source>
+                <target>Back</target>
+            </trans-unit>
+            <trans-unit id="profile" resname="profile">
+                <source>Profile</source>
+                <target>Profile</target>
+            </trans-unit>
+            <trans-unit id="error.password_fields_must_match" resname="error.password_fields_must_match">
+                <source>Passwords must match</source>
+                <target>Passwords must match</target>
+            </trans-unit>
+            <trans-unit id="logout" resname="logout">
+                <source>Logout</source>
+                <target>Logout</target>
+            </trans-unit>
+            <trans-unit id="success.created_successfully" resname="success.created_successfully">
+                <source>Success! Created successfully</source>
+                <target>Success! Created successfully</target>
+            </trans-unit>
+            <trans-unit id="form.data_updated_successfully" resname="form.data_updated_successfully">
+                <source>Success! Updated successfully</source>
+                <target>Success! Updated successfully</target>
+            </trans-unit>
+            <trans-unit id="form.no_data_found" resname="form.no_data_found">
+                <source>No records so far</source>
+                <target>No records so far</target>
+            </trans-unit>
+            <trans-unit id="run_check" resname="run_check">
+                <source>Run check now</source>
+                <target>Run check now</target>
+            </trans-unit>
+            <trans-unit id="checker_log" resname="checker_log">
+                <source>Checker log</source>
+                <target>Checker log</target>
+            </trans-unit>
+            <trans-unit id="label.link_url" resname="label.link_url">
+                <source>Link url</source>
+                <target>Link url</target>
+            </trans-unit>
+            <trans-unit id="label.response_value" resname="label.response_value">
+                <source>Response value</source>
+                <target>Response value</target>
+            </trans-unit>
+            <trans-unit id="label.action" resname="label.action">
+                <source>Action</source>
+                <target>Action</target>
+            </trans-unit>
+            <trans-unit id="text.choose_an_option" resname="text.choose_an_option">
+                <source>Choose an option</source>
+                <target>Choose an option</target>
+            </trans-unit>
+            <trans-unit id="action-response-code" resname="action-response-code">
+                <source>Response code</source>
+                <target>Response code</target>
+            </trans-unit>
+            <trans-unit id="action-redirect-count" resname="action-redirect-count">
+                <source>Redirect count</source>
+                <target>Redirect count</target>
+            </trans-unit>
+            <trans-unit id="action-text-scrape" resname="action-text-scrape">
+                <source>Text scrape</source>
+                <target>Text scrape</target>
+            </trans-unit>
+            <trans-unit id="label.scrape_text" resname="label.scrape_text">
+                <source>Text to scrape</source>
+                <target>Text to scrape</target>
+            </trans-unit>
+            <trans-unit id="text.not_found" resname="text.not_found">
+                <source>Not found</source>
+                <target>Not found</target>
+            </trans-unit>
+            <trans-unit id="text.found" resname="text.found">
+                <source>Found</source>
+                <target>Found</target>
+            </trans-unit>
+            <trans-unit id="menu.limit_text" resname="menu.limit_text">
+                <source>Displaying %firstItemNumber% - %lastItemNumber% of %allRecordsCount% records</source>
+                <target>Displaying %firstItemNumber% - %lastItemNumber% of %allRecordsCount% records</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,49 @@
+h1 {
+  font-size: 38px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer !important;
+}
+
+html, input, textarea, button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+:focus {
+  outline: none;
+}
+
+.text {
+  &--white {
+    color: white;
+  }
+}
+
+.icon {
+  font-size: 17px;
+}

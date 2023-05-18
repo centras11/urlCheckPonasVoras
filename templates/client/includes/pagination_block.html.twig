@@ -1,0 +1,6 @@
+<div class="navigation">
+    {{ knp_pagination_render(records, 'form/pagination.html.twig') }}
+    <span class="d-flex justify-content-center">
+        {{ 'menu.limit_text' | trans({'%firstItemNumber%': records.getPaginationData.firstItemNumber, '%lastItemNumber%': records.getPaginationData.lastItemNumber,'%allRecordsCount%': records.getTotalItemCount}) }}
+    </span>
+</div>
